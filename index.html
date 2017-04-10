@@ -1,0 +1,1690 @@
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="prism.css">
+
+	<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+
+
+	<style type="text/css">
+
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		margin: 0;
+
+
+	}
+
+	#main_header {
+		width: 100%;
+		height: 2.2em;
+		font-size: 3em;
+		background-color: rgb(115, 63, 101);
+		color: white;
+		font-weight: lighter;
+		font-family: sans-serif;
+		text-align: center;
+	}
+
+	.cont {
+		width: 100%;
+/*		margin: auto;
+
+/*		height: 100%;
+*/		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+
+	}
+
+	.cont > * {
+		margin: 40px;
+	}
+
+	#content {
+		width: 70%;
+		display: flex;
+		flex-direction: column;	
+		justify-content: space-around;
+	}
+
+	#content > * {
+		margin-top: 40px;
+	}
+
+
+	.desc {
+		font-family: sans-serif;
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+
+	.comment {
+		font-family:  sans-serif, "Verdana";
+	}
+
+	#toc {
+		width: 20%;
+		height: 80%;
+		position: fixed;
+		top: 120;
+		left: 10;
+	}
+
+	#link_cont {
+		height: 100%;
+		overflow: scroll;
+		display: flex;
+		flex-direction:column;
+		position: relative;
+
+		font-family: sans-serif;
+	}
+
+	a {
+		color: rgb(64, 25, 102);
+		text-decoration: none;
+	}
+
+	a:visited {
+		color:rgb(64, 25, 102); 
+		background-color:''; 
+		text-decoration:none;
+	}
+
+	a:hover   {color:Purple; background-color:transparent; text-decoration:underline}
+
+	.sec {
+/*		text-decoration: underline;
+*/		margin-top: 100px !important;
+		margin-bottom: 20px !important;
+		padding: 4px;
+		color: rgb(64, 25, 102);
+/*		background-color: rgb(234, 246, 251);
+		border: 1px solid black;
+		border-radius: 4px;
+*/		
+		border-bottom: 1px solid grey;
+		text-align: right;
+	}
+
+	#content a {
+		color: rgb(104, 38, 171);
+
+	}
+
+
+	table {
+/*		border: 1px solid black;
+*/	}
+
+	th, td {
+		border-bottom: 1px solid black;
+		padding: 5;
+
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<div id='main_header'>Interactive and Online DataViz - Cheat Sheet</div>
+
+	<div id='toc'>
+
+		<div id='link_cont'>
+
+		</div>
+	</div>
+
+
+	<div class='cont'>
+
+
+	<div id='content'>
+
+
+	<h1 class='sec' id='full_table'>Complete Table of Contents</h1>
+
+
+		<div id='full_ToC'>
+		</div>
+
+	<h1 class='sec' id='HTML'>HTML</h1>
+
+		<div class='comment'>
+
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://www.w3schools.com/html/default.asp">W3 HTML Page</a></td>
+			    <td>Good basic page with simple tutorials and references</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://www.w3schools.com/tags/default.asp">the W3 HTML Reference section</a></td>
+			    <td>Refernce on all HTML</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">The Mozilla MDN page</a></td>
+			    <td>More detailed reference if you want to go deeper</td> 
+			  </tr>
+			</table>
+
+
+		</div>
+
+
+	<div>
+		<div class='desc'>
+			HTML Elements
+		</div>
+
+		<pre><code class="language-markup">
+&lt;Element Name> Text or another element &lt;/Element Name>
+
+EG - 
+
+&lt;div>This is a paragraph of text&lt;/div>
+	</code></pre>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			HTML example elements
+
+		</div>
+		<pre><code class="language-markup">
+&lt;div>&lt;/div>
+
+&lt;p>&lt;/p>
+
+&lt;span>&lt;/span>
+
+&lt;img src="">
+
+
+Divs inside divs
+
+&lt;div>
+
+	&lt;div>&lt;/div>
+
+&lt;/div>
+
+	</code></pre>
+	</div>	
+
+
+
+
+	<h1 class='sec' id='styling'>Styling</h1>
+
+
+
+	<div>
+		<div class='desc'>
+			Styling Attribute
+
+		</div>
+		<pre><code class="language-markup">
+&lt;div style='color: black; font-family: sans-serif;'>&lt;/div>
+	</code></pre>
+	</div>
+
+
+
+	<h1 class='sec' id='css'>CSS</h1>
+
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://www.w3schools.com/css/default.asp">W3 CSS Page</a></td>
+			    <td>Good basic page with simple tutorials and references</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://www.w3schools.com/cssref/default.asp">the W3 CSS Reference section</a></td>
+			    <td>Refernce on all HTML</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">The Mozilla MDN CSS page</a></td>
+			    <td>More detailed reference if you want to go deeper</td> 
+			  </tr>
+			</table>
+
+
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Making CSS
+
+		</div>
+		<pre><code class="language-markup">
+&lt;head>
+
+	&lt;style type="text/css">
+
+		CSS goes in here!
+
+	&lt;/style>
+
+&lt;/head>
+	</code></pre>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Selecting multiple elements with CSS
+
+		</div>
+		<pre><code class="language-css">
+/* All Divs */
+div {
+	color: red;
+}
+
+/* Element with id 'fabulous_paragraph' */
+#fabulous_paragraph {
+	color: blue;
+}
+
+/* Elements with class 'serious_paragraph' */
+.serious_paragraph {
+	color: purple;
+}
+	</code></pre>
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Giving elements ids and classes
+
+		</div>
+		<pre><code class="language-markup">
+&lt;div id='fabulous_paragraph'>
+	A paragraph of text
+&lt;/div>
+
+&lt;div class='serious_paragraph'>
+	A paragraph of text
+&lt;/div>
+	</code></pre>
+	</div>	
+
+
+
+	<div>
+		<div class='desc'>
+			Styling with CSS
+
+		</div>
+		<pre><code class="language-css">
+div {
+	font-family: sans-serif;
+	color: purple;
+	background-color: yellow;
+
+	border: 1px solid green;
+}
+	</code></pre>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Layout with CSS
+
+		</div>
+		<pre><code class="language-css">
+div {
+	width: 300; /* Width in pixels */
+	height: 50%; /* Height as percentage of parent element */
+
+	margin: 30; /* Margin in pixels */
+	margin-top: 100; /* Margin on the top */
+}
+
+/* Centered horizontally */
+div {
+	width: 300;
+	margin: auto;
+}
+	</code></pre>
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			FlexBox with CSS
+		</div>
+
+<br><br>
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Guide to FlexBox</a></td>
+			    <td>Good page.  Works as both cheat sheet and tutorial.</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">MDN Guide to FlexBox</a></td>
+			    <td>Detailed tutorial</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="http://flexboxfroggy.com">Flexbox Froggy</a></td>
+			    <td>Interactive game tutorial</td> 
+			  </tr>
+			</table>
+
+
+	</div>
+
+
+
+
+		<pre><code class="language-css">
+/* This div will be the container of other items */
+/* It is the items inside that will be arranged according to these style rules  */
+
+div {
+	/* Makes the container a 'FlexBox' */
+	display: flex;
+
+	/* Direction items will be arranged in */
+	flex-direction: column; 
+	(row)
+
+	/* How items will be arranged along the direction specified above */
+	justify-content: center;  /* Ie, as direction='column', centered vertically */
+	(flex-end, flex-start, space-around, space-between)
+
+	/* How items will be arranged in opposite direction */
+	align-items: center;  /* ie, as direction='column', centered horizontally */
+	(flex-end, flex-start)
+}
+	</code></pre>
+	</div>
+
+
+
+	<h1 class='sec' id='js_fundamentals'>Javascript Fundamentals</h1>
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://www.w3schools.com/js/default.asp">W3 Javascript Page</a></td>
+			    <td>All you will really need</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="http://stackoverflow.com">Stackoverflow</a></td>
+			    <td>Your question or problem has happened before. <br> And the solution is probably here somewhere</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">The Mozilla MDN Javascript page</a></td>
+			    <td>More detailed reference and tutorials if you want to go deeper</td> 
+			  </tr>
+			</table>
+
+
+	</div>
+
+
+
+
+	<div>
+		<div class='desc'>
+			Hello World - Printing to The Console
+
+		</div>
+		<pre><code class="language-js">
+console.log('Hello World');
+	</code></pre>
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Basic Variables
+
+		</div>
+		<pre><code class="language-js">
+// String (ie, characters)
+
+var my_greeting = 'hello world';
+
+
+// Number
+
+var my_age = 21;
+	</code></pre>
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Making a Function
+
+		</div>
+		<pre><code class="language-js">
+
+function my_function (my_argument) {
+	
+	console.log(my_argument);
+}
+
+	</code></pre>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Using a Function
+
+		</div>
+		<pre><code class="language-js">
+
+my_function('Hello World');
+
+	</code></pre>
+
+	<div class='comment'>
+		Otherwise referred to as 'calling' a function
+	</div>
+	</div>	
+
+
+	<h1 class='sec' id='interactive_fundamentals'>Interaction Fundamentals - Useful Javascript</h1>
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/javascript/">Plotly.js Home Page</a></td>
+			    <td>Downloads and documentation and examples are all here</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://github.com/d3/d3-3.x-api-reference/blob/master/Selections.md">Core D3 Documentation</a></td>
+			    <td>The reference for all the D3 interactivity we're using.<br>
+			    	A little technical.</td> 
+			  </tr>
+			  <tr>
+			  	<td><a href="https://lodash.com">Lodash</a></td>
+			  	<td>Useful library of lots of helpful (and fast) functions</td>
+			  </tr>
+			</table>
+
+
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Loading Plotly Library
+
+		</div>
+	<pre><code class=" language-markup"> 
+&lt;head>
+   &lt;script src="https://cdn.plot.ly/plotly-latest.min.js">&lt;/script>
+&lt;/head>
+
+&lt;!-- If you've downloaded the library -->
+&lt;head>
+   &lt;script src="plotly-latest.min.js">&lt;/script>
+&lt;/head>
+
+	</code></pre>
+	<div class='comment'>
+		Place the script tag above in your head element. <br><br>
+		Note that you can download the library, and refer to the local file as above.  <br>
+		Make sure to upload the library file to wherever your webpage will be hosted.
+	</div>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Inserting an Image
+
+		</div>
+	<pre><code class=" language-markup"> 
+&lt;img id='my_cat' style='width: 300px;' src="cat.jpg">
+	</code></pre>
+	<div class='comment'>
+		Img elements insert pictures/images.  Place inside the body of you HTML document.
+		<br>
+		Make sure the file for the picture is in the same directory as you HTML document.
+	</div>
+	</div>	
+
+
+	<div>
+		<div class='desc'>
+			Making HTML element a javascript variable
+		</div>
+	<pre><code class=" language-js">
+// Make d3 separate variable for convenience 
+var d3 = Plotly.d3;
+var cat_img = d3.select('#my_cat'); // use '#[id of element]'
+
+// cat_img is now the html element, but in javascript land
+console.log(cat_img);
+	</code></pre>
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Adding an Event Listener
+		</div>
+	<pre><code class=" language-js">
+// With anonymous (ie un-named) functoin		
+cat_img.on('click', function(){
+	console.log('Meow!!');
+})
+
+// With named function
+function cat_click(){
+	console.log('Meow!!');
+}
+cat_imt.on('click', cat_click);
+	</code></pre>
+	</div>	
+
+
+	<div>
+		<div class='desc'>
+			Getting element style in javascript land
+		</div>
+	<pre><code class=" language-js">
+// Get current value of width
+var current_width = cat_img.style('width');
+
+// Change width
+cat_img.style('width', 700);
+
+	</code></pre>
+	</div>	
+
+
+	<div>
+		<div class='desc'>
+			Changing elements further
+		</div>
+	<pre><code class=" language-js">
+var my_element = d3.select('#my_element');
+
+// Change style //
+my_element.style('color', 'red');
+
+// Change attribute of element
+my_element.attr('id', 'new_id');
+my_element.attr('src', 'http://new_link.com')
+
+// Change text of element
+my_element.text('This is the new text inside the element')
+	</code></pre>
+	</div>		
+
+
+	<h1 class='sec' id='container_variables'>Container Variables - for storing data</h1>
+
+	<div>
+		<div class='desc'>
+			Array - ordered list of elements
+		</div>
+	<pre><code class=" language-js">
+var my_array = [1, 3, 6, 9];
+
+// To get the first element of the array
+console.log(my_array[0]) // counting starts from zero!
+
+// To add an element or value to the end
+my_array.push(12);
+
+	</code></pre>
+	</div>	
+
+
+	<div>
+		<div class='desc'>
+			Object - named elements
+		</div>
+	<pre><code class=" language-js">
+var my_cat_object = {age: 5, weight: 3.2, name: 'fluffy'};
+
+// to get the weight
+console.log(my_cat_object.weight);
+
+//to add another attribute
+my_cat_object.happiness = 0.6;
+	</code></pre>
+	</div>	
+
+
+	<div>
+		<div class='desc'>
+			Nesting containers in containers
+		</div>
+	<pre><code class=" language-js">
+var cat1 = {
+	name: 'fluffly',
+	age: 8,
+	weight: 6.3,
+	happiness: 0.1
+};
+
+var cat2 = {
+	name: 'furball',
+	age: 2,
+	weight: 2.8,
+	happiness: 0.9
+};
+
+// Two Objects within an array
+var my_cats = [cat1, cat2];
+
+console.log(my_cats);	
+	</code></pre>
+	</div>
+
+
+
+	<h1 class='sec' id='mapping_filtering'>Mapping and Filtering</h1>
+
+
+	<div>
+		<div class='desc'>
+			Mapping and Filtering
+		</div>
+	<pre><code class=" language-js">
+var my_old_array = [1, 2, 3];
+
+// Generates an exact copy
+var my_new_array = my_old_array.map(function(element_in_array){
+	return element_in_array;
+})
+
+// Generates array of values multiplied by 100
+var my_bigger_array = my_old_array.map(function(element_in_array){
+	return element_in_array * 10;
+})
+
+// Generates a copy that only has the values less than 3
+var my_small_array = my_old_array.filter(function(element_in_array){
+	return element_in_array &lt; 3;
+})
+	</code></pre>
+	</div>		
+
+
+	<div>
+		<div class='desc'>
+			Using Map and Filter to Manipulate Data
+		</div>
+	<pre><code class=" language-js">
+var cat1 = {
+	name: 'fluffly',
+	age: 8,
+	weight: 6.3,
+	happiness: 0.1
+};
+
+var cat2 = {
+	name: 'furball',
+	age: 2,
+	weight: 2.8,
+	happiness: 0.9
+};
+
+var cat3 = {
+	name: 'satan',
+	age: 10,
+	weight: 10,
+	happiness: 1
+};
+
+var my_cats = [cat1, cat2, cat3];
+
+// Get names of the cats
+my_cats.map(function(cat){
+	return cat.name;
+})
+
+
+// Get only cats whose weight less than 10
+my_cats.map(function(cat){
+	return cat.weight &lt; 10;
+})
+	</code></pre>
+	</div>		
+
+
+
+
+
+
+
+
+
+
+	<h1 class='sec' id='plotly'>Plotly Fundamentals</h1>
+
+
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/api/">Other Plotly Libraries</a></td>
+			    <td>Plotly can be used in Python/R/Matlab too.</td> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/create/">Online Graph Maker</a></td>
+			    <td>Plotly's online plot maker.  Very quick and useful. <br>
+			    	Can generate code for you and cloud-store, making sharing plots easy.</td> 
+			  </tr>
+			  <tr>
+			  	<td><a href="http://help.plot.ly/tutorials/">Help for Online Graph Maker</a></td>
+			  	<td>Shows the various online and cloud services Plotly provide.  All free with paid premium upgrade option</td>
+			  </tr>
+			</table>
+
+
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Define Location of the Plot
+
+		</div>
+		<pre><code class="language-markup">
+&lt;div id='plot_1' class='plots'>&lt;/div>
+		</code></pre>
+
+		<div class='comment'>
+			All the graphics that Plotly creates will go within this div. <br>
+			Plotly will obey what ever size you give to this div also.
+
+		</div>
+
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Make plot location a Javascript Variable
+		</div>
+		<pre><code class="language-js">
+// // Using D3 // //
+
+var plot_1 = d3.select('#plot_1').node(); 
+// node() strips away all the stuff D3 adds to the selected element, 
+// which let's Plotly add it's own stuff
+
+
+// // Using standard javascript // //
+
+var plot_1 = document.getElementById('plot_1')
+// no need for "#" before id
+// returns only the HTML element, without any stuff added
+		</code></pre>
+
+
+	</div>
+
+
+	<div>
+		<div class='desc'>
+			Make a Trace
+		</div>
+		<pre><code class="language-js">
+var trace1 = {
+	x: x_vals, // data along the x axis
+	y: y_vals // data along the y axis
+}
+
+		</code></pre>
+	<div class='comment'>
+		Traces are objects that represent single pieces of data.  
+		<br> A single plot can have multiple traces
+	</div>
+
+	</div>
+
+
+
+
+	<div>
+		<div class='desc'>
+			Make a new plot
+
+		</div>
+		<pre><code class="language-js">
+Plotly.newPlot(plot_1, [trace1])
+
+// Multiple traces
+Plotly.newPlot(plot_1, [trace1, trace2, trace3])
+		</code></pre>
+
+		<div class='comment'>
+			"plot_1" = place in page to put plot (see above)
+			<br><br>
+			"[trace1]" = Set of pre-defined data sets.  Here only one such trace, "trace1".
+			<br>
+			Even if only one trace, it must be in an array.
+		</div>
+
+	</div>
+
+
+
+
+	<h1 class='sec' id='plotly_custom'>Plotly Customisation</h1>
+
+
+
+	<div>
+		<div class='desc'>
+			Style a trace
+		</div>
+
+		<br>
+
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/javascript/reference/">Full Parameter Reference</a></td>
+			    <td>Reference for all styling and layout options</td> 
+			  </tr>
+
+			</table>
+
+
+	</div>
+
+		<br>
+		<pre><code class="language-js">
+var trace1 = {
+	x: x_vals,
+	y: y_vals,
+
+	// Appears in tooltip and legend
+	name: 'My first trace', 
+
+	// for standard scatter plots, 
+	// changes whether lines or markers or both are Used
+	mode: 'lines+markers', 
+
+	// Styling of the markers or symbols
+	marker: {
+		color: 'red',
+		symbol: 'hexagon-open',
+		size: 12,
+
+		// Styling of the boundary lines around markers
+		line: {
+			color: 'blue',
+			width: 2
+		}
+	},
+
+	// styling of the line plot
+	line: {
+		color: 'black',
+		shape: 'spline',
+		width: 4,
+		dash: '5 2'
+	}
+
+}
+	</code></pre>
+
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Different kinds of traces and plots
+		</div>
+
+		<br>
+
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/javascript/reference/">Full Parameter Reference</a></td>
+			    <td>Reference for all styling and layout options</td> 
+			  </tr>
+  			  <tr>
+			    <td><a href="https://plot.ly/javascript/#basic-charts">Plotly Examples</a></td>
+			    <td>Plenty of examples of the different plot types (and styles).</td> 
+			  </tr>
+			</table>
+	</div>
+
+
+
+
+
+
+
+		<br>
+		<pre><code class="language-js">
+
+// Bar Plot
+var bar_plot_trace = {
+	x: x_vals,
+	y: y_vals,
+
+	type: 'bar'
+}
+
+// Histogram
+var hist_trace = {
+	x: x_vals,
+
+	type: 'histogram'
+}
+
+// Box Plot
+
+var box_plot_trace = {
+	x: x_vals,
+
+	type: 'box'
+}
+
+// HeatMap
+
+var heat_trace = {
+	z: z_vals, 
+	// z_vals has to be 2d data,
+	// like [[1,2],[2,1]]
+
+	type: 'heatmap'
+}
+	</code></pre>
+
+	</div>
+
+
+
+
+<div>
+		<div class='desc'>
+			Customising the style and layout of the whole Plot
+		</div>
+
+		<br>
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/javascript/reference/">Full Parameter Reference</a></td>
+			    <td>Reference for all styling and layout options</td> 
+			  </tr>
+  			  <tr>
+			    <td><a href="https://plot.ly/javascript/#layout-options">Layout Examples</a></td>
+			    <td>Examples of using various layout options.</td> 
+			  </tr>
+			</table>
+	</div>
+
+
+
+		<br>
+		<pre><code class="language-js">
+// Make layout variable
+
+var layout = {
+	title: 'My Awesome Plot',
+	showlegend: true	
+}
+
+// provide layout to Plotly function
+
+Plotly.newPlot(plot_1, [trace1], layout)
+	</code></pre>
+
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Examples of Layout Options
+		</div>
+
+		<pre><code class="language-js">
+var layout = {
+	title: 'My Awesome Plot',
+	showlegend: true,
+
+	xaxis: {
+		title: 'My X axis title',
+		range: [-25, 75],
+		autorange: 'reversed'
+	},
+
+	yaxis: {
+		range: [1000, 1], // range makes axis reversed
+		tickvals: [1000, 500, 100, 50, 10],
+		ticktext: ['Big', 'less big', 'average', 'small', 'really small'],
+		showgrid: true,
+		gridwidth: 1,
+		gridcolor: 'white'
+	}
+
+	paper_bgcolor: 'black',
+	plot_bgcolor: 'grey'	
+}
+	</code></pre>
+
+	</div>
+
+
+
+	<h1 class='sec' id='plotly_interact'>Plotly Interaction</h1>
+
+
+	<div class='comment'>
+			<table style="">
+			  <tr>
+			    <th>Link</th>
+			    <th>Description</th> 
+			  </tr>
+			  <tr>
+			    <td><a href="https://plot.ly/javascript/plotlyjs-function-reference/">Full Function Reference</a></td>
+			    <td>List and documentation for all plot modifying functions</td> 
+			  </tr>
+			  <tr>
+			  	<td><a href="https://plot.ly/javascript/animations/">Animation Documentation</a></td>
+			  	<td>Documentation for the animation function (see below for more details)</td>
+			  </tr>
+  			  <tr>
+			    <td><a href="#interactive_fundamentals">Interactive Fundamentals</a></td>
+			    <td>Fundamentals above may also be useful.</td> 
+			  </tr>
+			</table>
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Update Whole Plot
+		</div>
+
+		<pre><code class="language-js">
+// Completely new Plot //
+
+Plotly.newPlot(myPlot, [trace1, trace2], layout);
+// Quick and easy way to change a plot
+	</code></pre>
+
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Alter Traces
+		</div>
+
+		<pre><code class="language-js">
+// Add trace to plot //
+
+Plotly.addTraces(myPlot, [new_trace1, new_trace2])
+
+
+// Remove Trace from Plot //
+
+Plotly.deleteTraces(myPlot, 0); 
+// 0 is the index of the trace to be removed
+// IE - the first trace added is removed
+
+// Multiple traces can be removed
+Plotly.deleteTraces(myPlot, [0, 1, 2]);
+	</code></pre>
+
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Restyle Traces
+		</div>
+
+		<pre><code class="language-js">
+// Make all trace markers red //
+
+var trace_update = {
+	opacity: 0.3,
+	marker: {
+		color: 'red'
+	}}
+
+Plotly.restyle(myPlot, trace_upate)
+
+
+// Make only the third and fourth trace markers red //
+
+Plotly.restyle(myPlot, trace_upate, [2, 3])
+	</code></pre>
+
+	<div class='comment'>
+		The new trace parameters are inserted into the pre-existing traces.  There's no need to create whole new trace objects.
+	</div>
+
+	</div>
+
+
+
+
+<div>
+		<div class='desc'>
+			Restyle whole plot
+		</div>
+
+		<pre><code class="language-js">
+var new_layout = {
+	title: 'new Title',
+	xaxis: {
+		range: [0, 200]
+	}
+}
+
+Plotly.relayout(myPlot, new_layout)
+
+	</code></pre>
+
+	<div class='comment'>
+		The new layout parameters are inserted into the pre-existing traces.  There's no need to create whole new layout objects.
+	</div>
+
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Animate a change to the plot
+		</div>
+
+		<div class='comment'>
+			<br><br>
+			See the Plotly.js <a href="https://plot.ly/javascript/animations/">animation page here</a>
+
+		</div>
+
+
+		<pre><code class="language-js">
+var new_trace = {
+	x: new_x_vals,
+	y: new_y_vals,
+	marker: {
+		color: 'red'
+	}
+}
+
+Plotly.animate(
+	myPlot, 
+	{
+		data: [new_trace]
+	}
+
+)
+
+
+// Animate Layout Change //
+
+var zoomed_layout = {
+	xaxis: {range: [0, 0.5]},
+	yaxis: {range: [0, 0.5]}
+}
+
+Plotly.animate(
+	myPlot,
+	{
+		layout: zoomed_layout
+	}
+)
+
+
+// Control timing of animation //
+
+Plotly.animate(
+	myPlot, 
+	{
+		data: [new_trace]
+	},
+	{
+		transition: {
+			duration: 3000
+		},
+		// Frame will pause for 1 second after transition
+		frame: {
+			duration: 4000
+		}
+	}
+
+)
+	</code></pre>
+
+	<div class='comment'>
+		The new trace and layout parameters are inserted into the pre-existing traces.  There's no need to create whole new objects.
+	</div>
+
+	</div>
+
+
+
+	<h1 class='sec' id='plotly_event'>Plotly Interaction Events</h1>
+
+
+
+
+<div>
+		<div class='desc'>
+			Listening to Interaction events on the Plot
+		</div>
+
+		<pre><code class="language-js">
+Plotly.newPlot(myPlot, [trace1])
+
+myPlot.on('plotly_click', function(event_data){
+	console.log(event_data)
+})
+
+// Also ... //
+
+myPlot.on('plotly_hover', function(event_data){
+	console.log(event_data)
+})
+
+
+// Typical event_data
+{
+  points: [{
+    // index in data of the trace associated with the selected point
+    curveNumber: 1,  
+
+    // index of the selected point
+    pointNumber: 1,  
+
+    x: 1,        // x value
+    y: 1,      // y value
+
+    // ref to the trace as sent to Plotly.plot associated with the selected point
+    data: {/* */},       
+
+    // ref to the trace including all of the default attributes
+    fullData: {/* */},   
+
+    // ref to x-axis object 
+    // (i.e layout.xaxis) associated with the selected point
+    xaxis: {/* */},  
+
+    // ref to y-axis object 
+    yaxis: {/* */}    
+  }, 
+  {
+    // similarly for any other selected points //
+  }]
+}
+
+	</code></pre>
+
+	<div class='comment'>
+		Note that the event_data provided by the event listener is a <em>reference</em>, which means that it is the same as the objects that define the plot.  Change the event_data and you will change the plot.
+		<br><br>
+		Therefore, if you wish to use and modify the event_data, you may need to copy it ... see below.
+	</div>
+
+	</div>
+
+
+
+<div>
+		<div class='desc'>
+			Copying variables in Javascript
+		</div>
+
+		<pre><code class="language-js">
+// Use the useful Lodash library
+// go to https://lodash.com for downloads and links
+
+&lt;head>
+	&lt;script src="lodash.js">&lt;/script>
+&lt;/head>
+
+...
+
+myPlot.on('plotly_click', function(event_data){
+	console.log(event_data)
+
+	// "_" = the Lodash library
+	// _.cloneDeep() completely copies the object you give it
+	var copy_event_data = _.cloneDeep(event_data);
+
+})
+
+
+
+// Make a simple copy function using JSON and built in functions
+
+function my_copy(my_variable){
+
+	// Converting to JSON (stringify) effectively copies the raw data
+	// Converting back from JSON (parse) makes it a javascript variable
+
+	return JSON.parse(JSON.stringify(my_variable));
+}
+
+
+myPlot.on('plotly_click', function(event_data){
+	console.log(event_data)
+
+	var copy_event_data = my_copy(event_data);
+
+})
+
+	</code></pre>
+
+	</div>
+
+
+
+	<h1 class='sec' id='load_data'>Loading Data Files</h1>
+
+
+<div>
+		<div class='desc'>
+			Loading CSV (spreadsheet-like) Files
+		</div>
+
+		<pre><code class="language-js">
+// Eg CSV file
+
+date,close
+24-Apr-07,93.24
+25-Apr-07,95.35
+26-Apr-07,98.84
+27-Apr-07,99.92
+30-Apr-07,99.80
+1-May-07,99.47
+
+d3.csv('data.csv', function(data){
+	
+	// ALL CODE THAT DEALS WITH DATA GOES
+	// IN THIS FUNCTION
+
+	// CSV files become arrays
+	// Each row is an element, and are javascript objects
+	// Each cell in a row becomes an attribute,
+	// depending on the column name
+
+
+	var trace = {
+
+		// Get all the first column values
+		x: data.map(function(row){
+				return row.date; // "date" is first column name
+			}),
+
+		// All second column values
+		y: data.map(function(row){
+				return row.close; // "close" is second column name
+			})
+
+	}
+
+	// Will plot first column against second column
+	Plotly.newPlot(myPlot, [trace])
+
+})
+	</code></pre>
+
+	</div>
+
+<div>
+		<div class='desc'>
+			Loading JSON (javascript-like) Files
+		</div>
+
+		<pre><code class="language-js">
+// Eg JSON file
+
+
+// array of objects, each with time-series data
+[
+  {
+    "name": "Angola",
+    "region": "Sub-Saharan Africa",
+    "years": [
+      1950,
+      ...
+    ],
+    "income": [
+      3363.02,
+      ...
+    ],
+    "population": [
+      4117617,
+      ...
+    ],
+    "lifeExpectancy": [
+      29.22,
+      ...
+    ]
+  },
+  {
+    "name": "Benin",
+    "region": "Sub-Saharan Africa",
+    "years": [
+      1950,
+      ...
+    ],
+    "income": [
+      1104.47,
+      ...
+    ],
+    "population": [
+      1672661,
+      ...
+    ],
+    "lifeExpectancy": [
+      36.53,
+      ...
+    ]
+  },
+
+  ...
+]
+
+
+// Loading
+
+d3.json('data.JSON', function(data){
+
+
+	// ALL CODE THAT DEALS WITH DATA GOES
+	// IN THIS FUNCTION
+
+
+	// JSON files simply become the variables
+	// in the file itself.
+	// JSON format is basically javascript variables
+	// in a file.
+
+	var trace = {
+		x: data.map(function(element){
+			return element.income[0];
+		}),
+
+		y: data.map(function(element){
+			return element.lifeExpectancy[0];
+		})
+	}
+
+	Plotly.newPlot(myPlot, [trace])
+	
+})
+	</code></pre>
+
+	</div>
+
+
+
+
+	<h1 class='sec' id='github_pages'>Hosting Your Page on Github</h1>
+
+
+	<div>
+		<div class='desc'>
+			Putting your webpage onto GitHub Pages
+
+		</div>
+
+		<div style='margin: 20px'>
+			<a href="github_pages_gif.html">Link to gif animation</a>
+		</div>
+		
+
+	</div>
+
+
+
+
+
+
+
+	</div> 
+
+	</div>
+
+	<script src='prism.js'></script> 
+
+
+	<script type="text/javascript">
+
+	// window.onscroll = function(){
+
+	// 	d3.select('#link_cont').style('top', function(){return window.scrollY + 'px'})
+	// }
+
+
+	d3.selectAll('.sec').each(function(){
+		var this_sec = d3.select(this);
+
+		d3.select('#link_cont').append('a')
+			.attr('href', '#'+this_sec.attr('id'))
+			.style('border-bottom', '1px dashed grey')
+			.style('padding-bottom', 6)
+			.style('padding-top', 6)
+			.text(this_sec.text())
+	})
+
+
+	d3.selectAll('.desc').each(function(){
+		var this_desc = d3.select(this);
+
+		var text = this_desc.text();
+
+		text = text.replace(/\s/g,'') //remove all white space
+
+		this_desc.attr('id', text);
+	})
+
+	d3.selectAll('.sec,.desc').each(function(){
+		var this_ref = d3.select(this);
+
+		d3.select('#full_ToC').append('div')
+			.style('margin-top', function(){
+				if (this_ref.classed('sec')) {
+					return 20
+				};
+			})
+
+		.append('a')
+			.attr('href', '#'+this_ref.attr('id'))
+			.text(this_ref.text())
+			.style('margin-left', function(){
+				if (this_ref.classed('desc')) {
+					return 25;
+				};
+			})
+			.style('font-family', function(){
+				if (this_ref.classed('desc')) {
+					return 'sans-serif';
+				};
+			})
+
+			.style('font-size', function(){
+				if (this_ref.classed('sec')) {
+					return 22
+				};
+			})
+
+		// d3.select('#full_ToC').append('br')
+	})
+
+
+
+	</script>
+</body>
+</html>
