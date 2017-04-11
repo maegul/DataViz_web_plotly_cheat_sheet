@@ -300,18 +300,65 @@ div {
 	color: red;
 }
 
+	</code></pre>
+	</div>
+
+
+
+	<div>
+		<div class='desc'>
+			Selecting elements by id and class
+
+		</div>
+		<pre><code class="language-css">
 /* Element with id 'fabulous_paragraph' */
 #fabulous_paragraph {
 	color: blue;
 }
 
-/* Elements with class 'serious_paragraph' */
+/* ALL Elements with class 'serious_paragraph' */
 .serious_paragraph {
 	color: purple;
 }
 	</code></pre>
 	</div>
 
+
+	<div>
+		<div class='desc'>
+			Advanced CSS Selectors
+
+		</div>
+		<pre><code class="language-css">
+/* All elements */
+* {
+	margin: 0px;
+}
+
+/* All elements with both serious and fabulous class */
+.serious_paragraph.fabulous_paragraph {
+	color: yellow;
+}
+
+/* All elements with either serious OR fabulous class */
+.serious,.fabulous {
+	color: black;
+}
+
+/* All fabulous elements inside serious elements*/
+.serious .fabulous { /*Yes ... that space does something*/
+	color: blue;
+}
+
+/* Only fabulous elements directly inside serious elements */
+.serious > .fabulous {
+	color: cyan;
+}
+/* This wouldn't apply to a fabulous element inside another element,
+that is itself inside a serious element.  
+".serious .fabulous" would apply to that however.*/
+	</code></pre>
+	</div>
 
 
 	<div>
@@ -325,6 +372,11 @@ div {
 &lt;/div>
 
 &lt;div class='serious_paragraph'>
+	A paragraph of text
+&lt;/div>
+
+&lt;!--  Multiple classes -->
+&lt;div class='serious_paragraph fabulous_paragraph'>
 	A paragraph of text
 &lt;/div>
 	</code></pre>
@@ -726,27 +778,43 @@ console.log(my_cats);
 
 	<div>
 		<div class='desc'>
-			Mapping and Filtering
+			Mapping
 		</div>
 	<pre><code class=" language-js">
 var my_old_array = [1, 2, 3];
 
 // Generates an exact copy
 var my_new_array = my_old_array.map(function(element_in_array){
-	return element_in_array;
-})
+		return element_in_array;
+	})
+// returns [1, 2, 3]
 
 // Generates array of values multiplied by 100
 var my_bigger_array = my_old_array.map(function(element_in_array){
-	return element_in_array * 10;
-})
+		return element_in_array * 100;
+	})
+// returns [100, 200, 300]
+	</code></pre>
+	</div>		
+
+
+
+	<div>
+		<div class='desc'>
+			Filtering
+		</div>
+	<pre><code class=" language-js">
+var my_old_array = [1, 2, 3];
+
 
 // Generates a copy that only has the values less than 3
 var my_small_array = my_old_array.filter(function(element_in_array){
-	return element_in_array &lt; 3;
-})
+		return element_in_array &lt; 3;
+	})
+// returns [1, 2]
 	</code></pre>
 	</div>		
+
 
 
 	<div>
@@ -779,14 +847,15 @@ var my_cats = [cat1, cat2, cat3];
 
 // Get names of the cats
 my_cats.map(function(cat){
-	return cat.name;
-})
+		return cat.name;
+	})
+// returns ['fluffy', 'furball', 'satan']
 
-
-// Get only cats whose weight less than 10
+// Get only cats whose weight is less than 10
 my_cats.map(function(cat){
-	return cat.weight &lt; 10;
-})
+		return cat.weight &lt; 10;
+	})
+// returns [{name: 'fluffy', ...}, {name: 'furball', ...}]
 	</code></pre>
 	</div>		
 
